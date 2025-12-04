@@ -1,9 +1,9 @@
-(define (calculate-area w h) 
-  (* w h))
+(define (calculate-perimeter w h) 
+  (+ w (+ w (+ h h))))
 
-(define (sum-areas n total)
+(define (sum-perimeters n total)
   (if (= n 0)
       total
-      (sum-areas (- n 1) (+ total (calculate-area 10 20))))) 
+      (sum-perimeters (- n 1) (+ total (calculate-perimeter 10 20))))) 
 
-(print (sum-areas 10000000 0))
+(print (sum-perimeters 1000000 0))
