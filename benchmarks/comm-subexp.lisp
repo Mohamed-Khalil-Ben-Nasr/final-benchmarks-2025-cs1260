@@ -1,0 +1,10 @@
+(define (sum x) 
+    (if (empty? x) 
+        0
+        (+ 1 (sum (- x 1)))
+    )
+)
+(define (readinc x)
+    (+ (read-num) x)
+)
+(+ (sum 2) (+ (readinc 1) (+ (readinc 1) (sum 2))))
